@@ -48,8 +48,7 @@
       "tacho",
       "sem forno",
       "para partilhar"
-    ],
-    "photo": ""
+    ]
   },
   {
     "id": "pan-con-tomate",
@@ -93,8 +92,7 @@
       "rápido",
       "sem forno",
       "pão"
-    ],
-    "photo": ""
+    ]
   },
   {
     "id": "salada-fresca-sem-pimentos",
@@ -143,8 +141,7 @@
       "sem forno",
       "rápido",
       "acompanhamento"
-    ],
-    "photo": ""
+    ]
   },
   {
     "id": "arroz-frito-camarao",
@@ -212,8 +209,7 @@
       "rápido",
       "frigideira",
       "sem forno"
-    ],
-    "photo": ""
+    ]
   },
   {
     "id": "ramen-caseiro-rapido",
@@ -284,8 +280,7 @@
       "caldo",
       "conforto",
       "sem forno"
-    ],
-    "photo": ""
+    ]
   },
   {
     "id": "arroz-malandrinho-tamboril",
@@ -344,8 +339,7 @@
       "tacho",
       "família",
       "sem forno"
-    ],
-    "photo": ""
+    ]
   },
   {
     "id": "tortilla-bacon-paprika",
@@ -399,8 +393,7 @@
       "frigideira",
       "sem forno",
       "família"
-    ],
-    "photo": ""
+    ]
   },
   {
     "id": "porco-cerveja-preta",
@@ -461,8 +454,7 @@
       "frigideira",
       "conforto",
       "sem forno"
-    ],
-    "photo": ""
+    ]
   },
   {
     "id": "carpaccio-ananas-lima-hortela",
@@ -507,8 +499,7 @@
       "sem forno",
       "vegetariano",
       "rápido"
-    ],
-    "photo": ""
+    ]
   },
   {
     "id": "laranja-canela-mel-hortela",
@@ -548,7 +539,35 @@
       "sem forno",
       "vegetariano",
       "rápido"
+    ]
+  },
+  {
+    "id": "teste",
+    "title": "teste123",
+    "category": "entradas",
+    "servings": "4 pessoas",
+    "time": "30 min",
+    "difficulty": "Médio",
+    "miguelin": 4,
+    "intro": "Teste 124",
+    "ingredients": [
+      "pao",
+      "cebola"
     ],
-    "photo": ""
+    "steps": [
+      "monsta\ncompra\ncome",
+      "come",
+      "vsdgdfsdfdsfsdf"
+    ],
+    "tips": [
+      "dfdef"
+    ],
+    "shopping": [
+      "pao",
+      "sapo"
+    ],
+    "tags": [
+      "carne"
+    ]
   }
 ]
