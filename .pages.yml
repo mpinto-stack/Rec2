@@ -1,0 +1,130 @@
+media:
+  input: assets/photos
+  output: assets/photos
+  extensions: [jpg, jpeg, png, webp]
+  categories: [image]
+
+content:
+  - name: recipes
+    label: Receitas
+    type: file
+    path: data/recipes.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: ID / slug
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9-]+$"
+          message: "Usa apenas letras minúsculas sem acentos, números e hífens. Ex.: arroz-frito-camarao"
+        description: "Identificador único usado pelo site. Não uses espaços nem acentos."
+      - name: title
+        label: Nome da receita
+        type: string
+        required: true
+      - name: category
+        label: Categoria
+        type: select
+        required: true
+        options:
+          values:
+            - name: entradas
+              label: Entradas
+            - name: pratos-principais
+              label: Pratos principais
+            - name: sobremesas
+              label: Sobremesas
+      - name: servings
+        label: Doses / pessoas
+        type: string
+        required: true
+        description: "Ex.: 4 pessoas, 2 porções, 4 adultos + 1 criança"
+      - name: time
+        label: Tempo
+        type: string
+        required: true
+        description: "Ex.: 30 min, 40–50 min, 1 h"
+      - name: difficulty
+        label: Dificuldade
+        type: select
+        options:
+          values:
+            - Muito fácil
+            - Fácil
+            - Médio
+            - Difícil
+      - name: miguelin
+        label: Classificação Miguelin
+        type: number
+        options:
+          min: 0
+          max: 5
+          step: 1
+        description: "0 = ainda por classificar; 1 a 5 = estrelas Miguelin."
+      - name: intro
+        label: Resumo
+        type: text
+        required: true
+      - name: ingredients
+        label: Ingredientes
+        type: string
+        list:
+          collapsible: false
+        required: true
+      - name: steps
+        label: Preparação
+        type: text
+        list:
+          collapsible: false
+        required: true
+        description: "Um passo por item."
+      - name: tips
+        label: Dicas
+        type: text
+        list:
+          collapsible: false
+      - name: shopping
+        label: Lista de compras
+        type: string
+        list:
+          collapsible: false
+      - name: tags
+        label: Tags / filtros
+        type: select
+        options:
+          multiple: true
+          values:
+            - acompanhamento
+            - arroz
+            - asiático
+            - caldo
+            - carne
+            - cerveja
+            - conforto
+            - espanhola
+            - família
+            - fresco
+            - frigideira
+            - fruta
+            - marisco
+            - massa
+            - ovos
+            - pão
+            - para partilhar
+            - peixe
+            - porco
+            - portuguesa
+            - rápido
+            - sem forno
+            - tacho
+            - vegetariano
+        description: "Seleciona tags existentes. Se precisares de uma nova tag, ela pode ser adicionada aqui na configuração."
+      - name: photo
+        label: Foto
+        type: image
+        description: "Opcional. Faz upload para assets/photos ou escolhe uma imagem existente. Se ficar vazio, o site usa a imagem padrão."
+
+settings:
+  hide: false
