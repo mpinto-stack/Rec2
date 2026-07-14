@@ -540,34 +540,5 @@
       "vegetariano",
       "rápido"
     ]
-  },
-  {
-    "id": "teste",
-    "title": "teste123",
-    "category": "entradas",
-    "servings": "4 pessoas",
-    "time": "30 min",
-    "difficulty": "Médio",
-    "miguelin": 4,
-    "intro": "Teste 124",
-    "ingredients": [
-      "pao",
-      "cebola"
-    ],
-    "steps": [
-      "monsta\ncompra\ncome",
-      "come",
-      "vsdgdfsdfdsfsdf"
-    ],
-    "tips": [
-      "dfdef"
-    ],
-    "shopping": [
-      "pao",
-      "sapo"
-    ],
-    "tags": [
-      "carne"
-    ]
   }
 ]
