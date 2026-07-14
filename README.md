@@ -1,62 +1,11 @@
 # Livro de Receitas do Miguel
 
-## Português
+Site estático de receitas para GitHub Pages.
 
-Repositório do site pessoal de receitas do Miguel.
+## Pages CMS
 
-### V2.1
+Esta versão inclui `.pages.yml` para editar receitas e fotos no Pages CMS. A página **Adicionar** tem link direto para `https://app.pagescms.org/`.
 
-Esta versão mantém o site estático para GitHub Pages e acrescenta melhorias de qualidade de vida:
+## Plano B
 
-- pesquisa na receita completa;
-- filtros por tags, Miguelin mínimo e tempo máximo;
-- lista de compras agrupada por secções;
-- editor para criar, editar e duplicar receitas;
-- pré-visualização antes de exportar;
-- validação de campos obrigatórios;
-- exportação de uma receita individual ou do `data/recipes.json` completo.
-
-### Como adicionar ou editar receitas
-
-1. Abre o site.
-2. Vai a **Adicionar**.
-3. Cria uma receita nova ou escolhe uma existente em **Editar receita existente**.
-4. Clica em **Gerar / Pré-visualizar**.
-5. Clica em **Descarregar recipes.json completo**.
-6. No GitHub, substitui `data/recipes.json` pelo ficheiro descarregado.
-7. Faz commit.
-
-### Fotos
-
-Coloca imagens em `assets/photos/` e usa caminhos como:
-
-```text
-assets/photos/arroz-frito-camarao.jpg
-```
-
----
-
-# Miguel's Recipe Book
-
-## English
-
-Personal recipe website for GitHub Pages.
-
-### V2.1
-
-This version keeps the site static and adds quality-of-life improvements:
-
-- full recipe search;
-- filters by tags, minimum Miguelin rating, and maximum time;
-- shopping list grouped by sections;
-- editor to create, edit, and duplicate recipes;
-- preview before export;
-- required-field validation;
-- export one recipe or the full `data/recipes.json` file.
-
-
-## Pages CMS experimental
-
-Esta versão inclui um ficheiro `.pages.yml` para testar edição de receitas e fotos através do Pages CMS.
-
-Consulta `CMS_SETUP.md` para instruções de teste.
+Na página **Adicionar**, o gerador de JSON continua disponível colapsado para o caso de o Pages CMS falhar.
