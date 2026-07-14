@@ -53,3 +53,10 @@ This version keeps the site static and adds quality-of-life improvements:
 - preview before export;
 - required-field validation;
 - export one recipe or the full `data/recipes.json` file.
+
+
+## Pages CMS experimental
+
+Esta versão inclui um ficheiro `.pages.yml` para testar edição de receitas e fotos através do Pages CMS.
+
+Consulta `CMS_SETUP.md` para instruções de teste.
