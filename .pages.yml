@@ -1,8 +1,17 @@
+# Pages CMS configuration for Livro de Receitas do Miguel
+# This file must stay at the repository root.
+# It lets Pages CMS edit data/recipes.json and upload recipe photos to assets/photos.
+
 media:
   input: assets/photos
   output: assets/photos
-  extensions: [jpg, jpeg, png, webp]
-  categories: [image]
+  extensions:
+    - jpg
+    - jpeg
+    - png
+    - webp
+  categories:
+    - image
 
 content:
   - name: recipes
@@ -19,11 +28,14 @@ content:
         pattern:
           regex: "^[a-z0-9-]+$"
           message: "Usa apenas letras minúsculas sem acentos, números e hífens. Ex.: arroz-frito-camarao"
-        description: "Identificador único usado pelo site. Não uses espaços nem acentos."
+        description: "Identificador único usado pelo site no URL/hash. Não uses espaços nem acentos. Ex.: arroz-frito-camarao."
+
       - name: title
         label: Nome da receita
         type: string
         required: true
+        description: "Nome visível no site. Ex.: Arroz frito com camarão."
+
       - name: category
         label: Categoria
         type: select
@@ -36,95 +48,88 @@ content:
               label: Pratos principais
             - name: sobremesas
               label: Sobremesas
+        description: "Define em que aba a receita aparece no site."
+
       - name: servings
         label: Doses / pessoas
         type: string
         required: true
-        description: "Ex.: 4 pessoas, 2 porções, 4 adultos + 1 criança"
+        description: "Ex.: 4 pessoas, 2 porções, 4 adultos + 1 criança."
+
       - name: time
         label: Tempo
         type: string
         required: true
-        description: "Ex.: 30 min, 40–50 min, 1 h"
+        description: "Ex.: 30 min, 40–50 min, 1 h. O site usa os números deste campo para o filtro de tempo."
+
       - name: difficulty
         label: Dificuldade
         type: select
+        required: true
         options:
           values:
             - Muito fácil
             - Fácil
             - Médio
             - Difícil
+        description: "Nível de dificuldade da receita."
+
       - name: miguelin
         label: Classificação Miguelin
         type: number
+        required: false
         options:
           min: 0
           max: 5
           step: 1
         description: "0 = ainda por classificar; 1 a 5 = estrelas Miguelin."
+
       - name: intro
         label: Resumo
         type: text
         required: true
+        description: "Resumo curto que aparece no cartão da receita."
+
       - name: ingredients
         label: Ingredientes
         type: string
-        list:
-          collapsible: false
+        list: true
         required: true
+        description: "Uma linha/item por ingrediente. Ex.: 2 dentes de alho picados."
+
       - name: steps
         label: Preparação
         type: text
-        list:
-          collapsible: false
+        list: true
         required: true
-        description: "Um passo por item."
+        description: "Um passo por item. O modo cozinhar usa esta lista para mostrar passo a passo."
+
       - name: tips
         label: Dicas
         type: text
-        list:
-          collapsible: false
+        list: true
+        required: false
+        description: "Dicas opcionais para melhorar a receita."
+
       - name: shopping
         label: Lista de compras
         type: string
-        list:
-          collapsible: false
+        list: true
+        required: false
+        description: "Itens simplificados para a lista de compras combinada. Ex.: Alho, Arroz, Camarão cru."
+
       - name: tags
         label: Tags / filtros
-        type: select
-        options:
-          multiple: true
-          values:
-            - acompanhamento
-            - arroz
-            - asiático
-            - caldo
-            - carne
-            - cerveja
-            - conforto
-            - espanhola
-            - família
-            - fresco
-            - frigideira
-            - fruta
-            - marisco
-            - massa
-            - ovos
-            - pão
-            - para partilhar
-            - peixe
-            - porco
-            - portuguesa
-            - rápido
-            - sem forno
-            - tacho
-            - vegetariano
-        description: "Seleciona tags existentes. Se precisares de uma nova tag, ela pode ser adicionada aqui na configuração."
+        type: string
+        list: true
+        required: false
+        description: "Tags usadas nos filtros. Sugestões: peixe, carne, porco, marisco, vegetariano, rápido, sem forno, arroz, asiático, fruta, família, portuguesa, espanhola, conforto, tacho, frigideira, ovos, massa, caldo, fresco, acompanhamento, cerveja, pão, para partilhar."
+
       - name: photo
         label: Foto
         type: image
-        description: "Opcional. Faz upload para assets/photos ou escolhe uma imagem existente. Se ficar vazio, o site usa a imagem padrão."
+        required: false
+        description: "Opcional. Faz upload para assets/photos ou escolhe uma imagem existente. Se ficar vazio, o site usa assets/default-recipe.svg."
 
 settings:
   hide: false
